@@ -14,17 +14,19 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.example.petshop.ui.theme.PetShopTheme
 
 class MainActivity : ComponentActivity() {
+    override fun onCreate(savedInstanceState: Bundle?){
+        super.onCreate(savedInstanceState)
+        val cat = Cat("Coco", 6)
+        val scorpion = Scorpion("Stinger", 32)
+        val pettablePets = mutableListOf<Pettable>()
 
-    val cat = Cat("Coco", 6)
-    val dog = Dog("Mochi", 6)
-    val scorpion = Scorpion("Stinger", 32)
 
-    val pettablePets = mutableListOf<Pettable>()
-
-    init{
         pettablePets.add(cat)
-        pettablePets.add(dog)
+        pettablePets.add(scorpion)
+
     }
+
+
 }
 
 
